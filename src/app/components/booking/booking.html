@@ -1,0 +1,121 @@
+<body>
+
+  <div class="container-fluid">
+    <div class="row g-4">
+      
+      <!-- Booking List (col-8) -->
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-header bg-warning text-dark">
+            <i class="fa fa-list"></i> Booking List
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <!-- Booking Card 1 -->
+              <div class="col-md-6">
+                <div class="booking-card p-3 bg-white">
+                  <h5 class="mb-2"><i class="fa fa-user"></i> John Doe</h5>
+                  <p class="mb-1 icon-text"><i class="fa fa-map-marker"></i> City: New York</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-car"></i> Car ID: 3</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-calendar"></i> Date: 2025-11-10</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-money"></i> Discount: $10 | Total: $190</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-envelope"></i> john@example.com</p>
+                  <p class="mb-2 icon-text"><i class="fa fa-phone"></i> +1 234 567 890</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-sm btn-primary me-2"><i class="fa fa-pencil"></i></button>
+                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Booking Card 2 -->
+              <div class="col-md-6">
+                <div class="booking-card p-3 bg-white">
+                  <h5 class="mb-2"><i class="fa fa-user"></i> Jane Smith</h5>
+                  <p class="mb-1 icon-text"><i class="fa fa-map-marker"></i> City: Los Angeles</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-car"></i> Car ID: 1</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-calendar"></i> Date: 2025-11-11</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-money"></i> Discount: $5 | Total: $95</p>
+                  <p class="mb-1 icon-text"><i class="fa fa-envelope"></i> jane@example.com</p>
+                  <p class="mb-2 icon-text"><i class="fa fa-phone"></i> +1 789 654 321</p>
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-sm btn-primary me-2"><i class="fa fa-pencil"></i></button>
+                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add more booking cards here dynamically later -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form (col-4) -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header bg-warning text-dark">
+            <i class="fa fa-plus-circle"></i> Add / Edit Booking
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="bookingId" class="form-label">Booking ID</label>
+                  <input type="number" class="form-control" id="bookingId" placeholder="Enter ID">
+                </div>
+                <div class="col-md-6">
+                  <label for="carId" class="form-label">Car ID</label>
+                  <input type="number" class="form-control" id="carId" placeholder="Enter Car ID">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="customerName" class="form-label">Customer Name</label>
+                  <input type="text" class="form-control" id="customerName" placeholder="Enter Name">
+                </div>
+                <div class="col-md-6">
+                  <label for="customerCity" class="form-label">City</label>
+                  <input type="text" class="form-control" id="customerCity" placeholder="Enter City">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="mobileNo" class="form-label">Mobile No</label>
+                  <input type="text" class="form-control" id="mobileNo" placeholder="Enter Mobile">
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="bookingDate" class="form-label">Booking Date</label>
+                  <input type="date" class="form-control" id="bookingDate">
+                </div>
+                <div class="col-md-6">
+                  <label for="discount" class="form-label">Discount</label>
+                  <input type="number" class="form-control" id="discount" placeholder="Enter Discount">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="totalBill" class="form-label">Total Bill Amount</label>
+                <input type="number" class="form-control" id="totalBill" placeholder="Enter Amount">
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Booking</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>

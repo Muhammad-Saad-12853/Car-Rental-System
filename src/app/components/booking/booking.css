@@ -1,0 +1,50 @@
+body {
+      background: #f5f6fa;
+      padding: 20px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .card-header {
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .booking-card {
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .booking-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .btn-primary {
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .icon-text {
+      font-size: 0.9rem;
+    }
+
+    .icon-text i {
+      color: #2575fc;
+      width: 20px;
+    }

@@ -1,0 +1,20 @@
+<body>
+
+  <div class="login-card">
+    <h3>Admin Login</h3>
+    <form>
+      <div class="mb-3 position-relative">
+        <i class="fa fa-user icon-input"></i>
+        <input type="text" name="userName" [(ngModel)]="loginObj.userName" class="form-control ps-4" placeholder="Username" required>
+      </div>
+      <div class="mb-3 position-relative">
+        <i class="fa fa-lock icon-input"></i>
+        <input type="password" name="password" [(ngModel)]="loginObj.password" class="form-control ps-4" placeholder="Password" required>
+      </div>
+      <div class="d-grid mt-4">
+        <button type="button" (click)="onLogin()" class="btn btn-login">Login</button>
+      </div>
+    </form>
+    <p class="text-center mt-3 text-muted" style="font-size: 0.9rem;">Forgot your password?</p>
+  </div>
+</body>
