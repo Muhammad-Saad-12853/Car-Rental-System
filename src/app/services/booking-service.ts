@@ -19,5 +19,9 @@ export class BookingService {
       console.log('Sending booking data:', obj);
       return this.http.post("https://freeapi.miniprojectideas.com/api/CarRentalApp/CreateNewBooking",obj)
     }
-      
+
+  deleteBooking(id: any) {
+    return this.http.delete(`https://freeapi.miniprojectideas.com/api/CarRentalApp/DeletBookingById?id=${id}`);
+  }
+
 }

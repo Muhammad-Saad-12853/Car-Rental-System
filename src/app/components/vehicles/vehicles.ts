@@ -25,6 +25,7 @@ export class Vehicles implements OnInit {
 
   ngOnInit(): void {
     this.getAllCars()
+  // console.log("run")
   }
   
 

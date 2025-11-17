@@ -1,6 +1,6 @@
 <body>
   <div class="container-fluid">
-    <div class="row g-4">
+    <div class="row g-4 ">
       <!-- Booking List (col-8) -->
       <div class="col-lg-8">
         <div class="card">
@@ -9,20 +9,6 @@
           </div>
           <div class="card-body booking-scroll">
             <div class="row g-3">
-              <!-- Compact Booking Cards -->
-              <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="booking-card">
-                  <h6><i class="fa fa-user"></i> John Doe</h6>
-                  <p class="icon-text"><i class="fa fa-map-marker"></i> New York</p>
-                  <p class="icon-text"><i class="fa fa-car"></i> Car ID: 3</p>
-                  <p class="icon-text"><i class="fa fa-calendar"></i> 2025-11-10</p>
-                  <p class="icon-text"><i class="fa fa-money"></i> $190 | Disc: $10</p>
-                  <div class="d-flex justify-content-end mt-1">
-                    <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-sm btn-danger ms-2"><i class="fa fa-trash"></i></button>
-                  </div>
-                </div>
-              </div> -->
               @for (item of bookingList; track $index) {
               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div class="booking-card">
@@ -33,8 +19,8 @@
                   <p class="icon-text"><i class="fa fa-calendar"></i>{{ item.bookingDate }}</p>
                   <p class="icon-text"><i class="fa fa-money"></i>{{ item.discount }}</p>
                   <div class="d-flex justify-content-end mt-1">
-                    <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-sm btn-danger ms-2"><i class="fa fa-trash"></i></button>
+                    <!-- <button class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></button> -->
+                    <button class="btn btn-sm btn-danger ms-2" (click)="DeleteBooking(item.bookingId)"><i class="fa fa-trash"></i></button>
                   </div>
                 </div>
               </div>
@@ -104,16 +90,21 @@
                     formControlName="mobileNo"
                     id="mobileNo"
                     placeholder="Enter Mobile"
+                    [class.is-invalid]="bookingForm.get('mobileNo')?.invalid && bookingForm.get('mobileNo')?.touched"
                   />
+                  <div class="invalid-feedback" *ngIf="bookingForm.get('mobileNo')?.invalid && bookingForm.get('mobileNo')?.touched">
+                    Please enter a valid 10-digit mobile number.
+                  </div>
                 </div>
                 <div class="col-md-6">
                   <label for="email" class="form-label">Email</label>
                   <input
                     type="email"
                     class="form-control"
-                    formControlName="emailId"
+                    formControlName="email"
                     id="email"
                     placeholder="Enter Email"
+                    [class.is-invalid]="bookingForm.get('email')?.invalid && bookingForm.get('email')?.touched"
                   />
                 </div>
               </div>
